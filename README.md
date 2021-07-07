@@ -6,7 +6,7 @@ leetcode 문제 풀이
 ## Note
 ### 1) `enumerate`
 - list, set, tuple 등의 자료형을 index를 포함한 enumerate 객체로 리턴
-```
+```python
 for i, v in enumerate(a):
     print(i, v)
 ```
@@ -14,7 +14,7 @@ for i, v in enumerate(a):
 ### 2) 나누기 연산자 : `/` 와 `//`의 차이
 - `/` : 정수형 나누면 실수형 리턴
 - `//` : 정수형 나눌때 동일한 정수형 리턴 + 내림 연산자 역할 = 몫 구하는 연산자
-```
+```python
 >>> 5 / 3
 1.666666667
 >>> type(5 / 3)
@@ -28,7 +28,7 @@ for i, v in enumerate(a):
 
 ### 3) `locals`
 - 로컬에 선언된 모든 변수 조회 (디버깅 용이)
-```
+```python
 import pprint
 pprint.pprint(locals())
 
@@ -43,7 +43,7 @@ pprint.pprint(locals())
 ### 4) 명시적 또는 암시적 비교
 - 암시적 (ex. `not`) : bool 비교, 존재 여부 확인
 - 명시적 (ex. `==`) : 정수 비교
-```
+```python
 # good
 if not users: ...
 if foo == 0: ...
@@ -81,7 +81,7 @@ if not i % 10: ...
 - `list` : 대괄호(`[]`)
 - `set`과 `dict` : 둘 다 중괄호(`{}`) 사용, `set`은 `{1}` 처럼 key 없이 value만 선언)
 - `tuple` : 소괄호(`()`)
-```
+```python
 # set
 a = {'a', 'b', 'c'}
 
@@ -98,7 +98,7 @@ a = {'a': 'A', 'b': 'B', 'c': 'C'}
 ### 9) `is` 와 `==`
 - `is` : `id()` 값을 비교하는 함수
 - `==` : 값을 비교하는 연산자 (`None`은 값 자체가 정의되어 있지 않으므로, 비교 불가능)
-```
+```python
 if a is None: pass
 
 >>> a = [1, 2, 3]
@@ -140,7 +140,7 @@ False
   - **O(nlogn)**
     - `a.sort()` : 팀소트(timsort) 사용, 최선의 경우 O(n)
 - 사용 예시    
-```
+```python
 >>> a = list() # 초기화
 >>> a = []
 >>> a = [1, 2, 3]
@@ -182,7 +182,7 @@ False
   - `collections.OrderedDict()` : 항상 입력 순서 유지
   - `collections.defaultdict(default_value)` : 조회시 디폴트 값 생성해 키 오류 방지
   - `collections.Counter()` : 값을 key로 하고, 개수를 value로 만들어 카운팅
-```
+```python
 >>> import collections
 >>> a = [1, 2, 3, 4, 5, 5, 5, 6, 6]
 >>> b = collections.Counter(a)
@@ -200,7 +200,7 @@ Counter({5: 3, 6: 2, 1: 1, 2: 1, 3: 1, 4: 1})
     - `a[key] = value`
     - `key in a`
 - 사용 예시    
-```
+```python
 >>> a = dict() # 초기화
 >>> a = {}
 >>> a = {'key1': 'value1', 'key2': 'value2'}
