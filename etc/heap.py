@@ -3,11 +3,10 @@
 
 class BinaryHeap(object):
     """참고
-    1. 이진 힙의 인덱스 위치 계산 수도코드
-        - parent(i) : ceil((i - 1) / 2) (ceil = 올림)
-        - left(i) : 2i
-        - right(i) : 2i + 1
-
+    > 이진 힙의 인덱스 위치 계산 수도코드
+      - parent(i) : ceil((i - 1) / 2) (ceil = 올림)
+      - left(i) : 2i
+      - right(i) : 2i + 1
     """
 
     def __init__(self):
