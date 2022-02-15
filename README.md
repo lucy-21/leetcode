@@ -251,3 +251,14 @@ key3 value3
 >>> id(a), id(b)
 (4325641600, 4325195392)
 ```
+
+### 14) list 정렬시 lambda 사용
+```python
+>>> a = [(1, "c"), (1, "b"), (1, "a"), (2, "a"), (3, "c")]
+>>> a.sort(key=lambda item: item[0]) # key에 대해 정렬
+>>> a
+[(1, 'c'), (1, 'b'), (1, 'a'), (2, 'a'), (3, 'c')]
+>>> a.sort(key=lambda item: (item[0], item[1])) # key, value(후순위)에 대해 정렬
+>>> a
+[(1, 'a'), (1, 'b'), (1, 'c'), (2, 'a'), (3, 'c')]
+```
