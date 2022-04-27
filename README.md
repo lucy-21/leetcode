@@ -2,6 +2,7 @@
 leetcode 문제 풀이
 - 사용 언어 : Python 3.8
 - 참고 : [(책) 파이썬 알고리즘 인터뷰](https://github.com/onlybooks/algorithm-interview)
+- leetcode 페이지 : https://leetcode.com/lhana1127/
 
 ## Note
 ### 1) `enumerate`
@@ -261,7 +262,19 @@ key3 value3
 >>> a.sort(key=lambda item: item[0]) # key에 대해 정렬
 >>> a
 [(1, 'c'), (1, 'b'), (1, 'a'), (2, 'a'), (3, 'c')]
+>>> a.sort(key=lambda item: item[0], reverse=True) # reverse 정렬
+>>> a
+[(3, 'c'), (2, 'a'), (1, 'c'), (1, 'b'), (1, 'a')]
 >>> a.sort(key=lambda item: (item[0], item[1])) # key, value(후순위)에 대해 정렬
 >>> a
 [(1, 'a'), (1, 'b'), (1, 'c'), (2, 'a'), (3, 'c')]
+```
+
+### 15) XOR - 같은 수끼리 XOR 연산하면 0
+- XOR : 두 가지의 조건이 서로 반대의 값을 가지면, 결과가 참
+```python
+>>> a = 5
+>>> b = 5
+>>> a ^ b # python XOR = ^
+0
 ```
