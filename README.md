@@ -278,3 +278,16 @@ key3 value3
 >>> a ^ b # python XOR = ^
 0
 ```
+
+### 16) DP Memoization -> cache 사용
+- Python은 메모이제이션을 쉽게 적용할 수 있는 데코레이터 제공
+- 함수의 인자를 캐시키로 사용하기 때문에 함수의 실행 결과가 함수의 인자 이외에 다른 요소에 의존적인 함수에는 사용하지 못함
+```python
+@functools.lru_cache
+  def dfs(i, j):
+    if i >= m or j >= n:
+      return 0
+    if i == m - 1 and j == n - 1:
+      return 1
+    return dfs(i + 1, j) + dfs(i, j + 1)
+```
